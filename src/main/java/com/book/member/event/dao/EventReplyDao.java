@@ -75,7 +75,7 @@ public class EventReplyDao {
 			pstmt.setInt(3, userNo);
 			result = pstmt.executeUpdate();
 		}catch(Exception e) {
-			System.out.println("daoException");
+		
 			e.printStackTrace();
 		}finally {
 			close(pstmt);
@@ -117,7 +117,7 @@ public class EventReplyDao {
 	        pstmt.setInt(1, eventReplyNo);
 	        result = pstmt.executeUpdate();
 	    }catch (Exception e) {
-	        System.out.println("Error: " + e.getMessage());
+	       
 	        e.printStackTrace();
 	    }finally {
 	        close(pstmt);

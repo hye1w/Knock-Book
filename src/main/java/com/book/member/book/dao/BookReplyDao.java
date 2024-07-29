@@ -53,7 +53,6 @@ public class BookReplyDao {
                 bre.put("br_modDate", sdf.format(btModDate));
 
                 list.add(bre);
-                System.out.println(list);
 
             }
         }catch(Exception e) {
@@ -121,7 +120,6 @@ public class BookReplyDao {
             pstmt.setInt(1, btReplyNo);
             result = pstmt.executeUpdate();
         }catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
             e.printStackTrace();
         }finally {
             close(pstmt);

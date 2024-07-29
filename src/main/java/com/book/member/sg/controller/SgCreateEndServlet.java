@@ -26,7 +26,7 @@ public class SgCreateEndServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		if(ServletFileUpload.isMultipartContent(request)) {
-			// 이미지 경로 설정 
+
 			String dir = request.getServletContext().getRealPath("/upload/sg");
 			int maxSize = 1024 * 1024 * 10;
 			String encoding = "UTF-8";
@@ -41,7 +41,7 @@ public class SgCreateEndServlet extends HttpServlet {
 			String oriName3 = mr.getOriginalFileName("sg_file3");
 			String reName3 = mr.getFilesystemName("sg_file3");
 			int userNo = Integer.parseInt(mr.getParameter("user_no"));
-			// 값을 넣어서 dao 로 
+
 			Suggestion sg = new Suggestion();
 		      sg.setSg_title(title);
 		      sg.setSg_content(content);

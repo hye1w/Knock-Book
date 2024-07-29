@@ -100,9 +100,12 @@
       /* paging */
       @charset "UTF-8";
       
-      .center {
-          text-align: center; 
-      }
+       .center {
+        display : flex;
+        text-align: center;
+        justify-content : center;
+        margin-top: 20px;
+    }
       
       .pagination {
           display: inline-block; 
@@ -310,7 +313,7 @@
                        <tbody> 
                            <% 
                                List<Map<String, String>> list = (List<Map<String, String>>) request.getAttribute("parUserList"); 
-                               int pageSize = 3; // 한 페이지에 표시할 항목 수
+                               int pageSize = 10; // 한 페이지에 표시할 항목 수
                                int nowPage = request.getParameter("nowPage") == null ? 1 : Integer.parseInt(request.getParameter("nowPage"));
                                int startNo = (nowPage - 1) * pageSize + 1;
                                for (int i = 0; i < list.size(); i++) {

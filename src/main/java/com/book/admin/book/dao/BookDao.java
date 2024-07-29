@@ -30,7 +30,7 @@ public class BookDao {
             int count = rs.getInt(1);
 
             if (count > 0) {
-                System.out.println("책이 이미 존재합니다.");
+               
                 result = 0;
             } else {
                 String sql2 = "INSERT INTO `book`(`books_title`, `books_author` , `books_category_no`, `books_publisher_name`, `books_img`) VALUES(?,?,?,?,?)";
@@ -41,7 +41,7 @@ public class BookDao {
                 pstmt.setString(4, bk.getBooks_publisher_name());
                 pstmt.setString(5, bk.getBooks_image());
                 result = pstmt.executeUpdate();
-                System.out.println(result);
+                
             }
 
 
@@ -119,7 +119,7 @@ public class BookDao {
 
             if(rs.next()) {
                 result = rs.getInt("cnt");
-                System.out.println(result);
+              
             }
         }catch(Exception e) {
             e.printStackTrace();
@@ -140,7 +140,7 @@ public class BookDao {
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         int book_no = Integer.parseInt(id);
-        System.out.println(book_no);
+
 
         try{
 

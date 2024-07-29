@@ -7,14 +7,11 @@
 <title>기본 답변 관리</title>
 
 <style>
-* {
-  background-color: rgb(247, 247, 247);
+* { 
   box-sizing: border-box;
   margin: 0;
-}
-html {
-  font-size: 10px;
-}
+} 
+
 .admin_basic {
   width: 80%;
   margin: 50px auto;
@@ -25,7 +22,7 @@ html {
 .admin_basic td {
   padding: 12px 10px;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 16px;
   border-bottom: 1px solid #ddd;
 }
 .admin_basic thead tr {
@@ -52,7 +49,7 @@ html {
 .replyContent{
   width: 100%;
   padding: 12px 10px;
-  font-size: 1.4rem;
+  font-size: 16px;
   border: 1px solid #ddd;
   border-radius: 3px;
   resize: vertical;
@@ -66,7 +63,7 @@ html {
   background-color: #f0f0f0;
   border-radius: 3px;
   cursor: pointer;
-  font-size: 1.2rem;
+   font-size: 16px;
 }
 
 .BasicBtns:hover {
@@ -77,6 +74,7 @@ html {
   display: flex;
   justify-content: center;
   gap: 10px;
+  
 }
 
 .hidden {

@@ -41,7 +41,7 @@ public class CreateBookEndServlet extends HttpServlet {
 
         int result = new BookDao().createBook(bk);
         if (result > 0) {
-            // 성공 시 alert 창 띄우고 리디렉션
+          
             response.setContentType("text/html; charset=UTF-8");
             PrintWriter writer = response.getWriter();
             writer.println("<script>alert('도서등록이 완료되었습니다.'); location.href='/book/list';</script>");

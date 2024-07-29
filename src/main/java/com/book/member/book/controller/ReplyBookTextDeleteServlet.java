@@ -20,7 +20,7 @@ public class ReplyBookTextDeleteServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // 독후감 번호는 페이지 조회할 때만
+
         int btNo = Integer.parseInt(request.getParameter("bt_no"));
 
         int btReplyNo = Integer.parseInt(request.getParameter("bt_reply_no"));

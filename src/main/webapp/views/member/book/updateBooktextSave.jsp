@@ -99,7 +99,7 @@
 
     <section class="holeList">
         <div class="word">
-            <h3>나만보기 수정</h3>
+            <h3>임시저장 수정</h3>
         </div>
         <form class="form_write" name="create_account_form" id="create_account_form" action="/user/saveTextEnd" method="post">
             <div class="form_left">
@@ -159,7 +159,7 @@
             <div class="form_right">
                 <img src="<%= book.get("bk_img") %>" alt="Book Image" />
                 <div class="bw_btn">
-                    <button type="button" class="btn btn-secondary" onclick="saveForm();">임시저장</button>
+                    <button type="button" class="btn btn-secondary" onclick="saveForm();">저장</button>
                     <button type="button" class="btn btn-secondary" onclick="deleteForm();">삭제</button>
                     <button type="button" class="btn btn-primary" onclick="submitForm();">제출</button>
                 </div>

@@ -8,135 +8,135 @@
 <title>관리자 문의사항 조회</title>
 <style>
 
-* {
-  background-color: rgb(247, 247, 247);
-  box-sizing: border-box; 
-  margin: 0;
-}
-
-html {
-  font-size: 10px;
-}
-
-.search_section {
-  margin-bottom: 20px
-} 
-
-.search_title {
-  font-size: 23px;
-  font-weight: 600;
-  text-align: center;
-  color: #2c2c2c; 
-  margin-bottom: 20px;
-}
-
-.search_input {
-  width: 40%;
-  padding: 15px 24px;
-  height: 30px;
-
-  font-size: 14px;
-  line-height: 18px;
-  
-  color: #575756;
-
-  border-radius: 20px;
-  border: 1px solid #575756;
-}
-
-.search_btn{
-  border: none;
-  
-}
-
-.status_btn{
-  border: none;
-  margin-left: 500px;
-  font-size: 16px;
-}
-
-#sglist {
-  max-width: 1200px; 
-  margin: 80px auto;
-  padding: 0 20px;
-}
-
-.board_list {
-  width: 100%;
-  border-collapse: collapse;
-  border-top: 2px solid #000;
-}
-
-.board_list th,
-.board_list td {
-  padding: 15px 0;
-  text-align: center;
-  font-size: 1.4rem;
-  border-bottom: 1px solid #ddd;
-}
-
-.board_list thead tr {
-  border-bottom: 1px solid #999;
-}
-
-.board_list th {
-  font-weight: 600;
-}
-
-.board_list .num {
-  width: 10%;
-}
-
-.board_list .title {
-  width: 60%;
-  text-align: left;
-}
-.board_list .title a {
-  color: #2c2c2c;
-  text-decoration: none;
-}
-
-.board_list thead .title {
-  text-align: center;
-}
-
-.board_list .date {
-  width: 10%;
-}
-
-.board_list .status {
-  width: 10%;
-}
-#paging{
-   width: 100%;
-}
-.center { 
-  text-align: center;
-  margin-top: 20px;
-}
-.pagina {
-  display: inline-block;
-
-}
-.pagina a {
-  color: black;
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
-  transition: background-color .3s;
-  margin: 0 4px;
-}
-.pagina a.active {
-  background-color: #A5A5A5;
-  color: white;
-  border: 1px solid #A5A5A5;
-}
-.pagina a:hover:not(.active) {background-color: #ddd;}
-
-</style>
-
-
-
+	* { 
+	  box-sizing: border-box; 
+	  margin: 0;
+	} 
+	
+	.search_section {
+	  margin-bottom: 20px
+	} 
+	
+	.search_title {
+	  font-size: 23px;
+	  font-weight: 600;
+	  text-align: center;
+	  color: #2c2c2c; 
+	  margin-bottom: 20px;
+	}
+	
+	.search_input {
+	  width: 40%;
+	  padding: 15px 24px;
+	  height: 30px;
+	
+	  font-size: 14px;
+	  line-height: 18px;
+	  
+	  color: #575756;
+	
+	  border-radius: 20px;
+	  border: 1px solid #575756;
+	}
+	
+	.search_btn{
+	  border: none;
+	  background-color: rgb(224, 195, 163);
+	  padding : 4px 6px;
+	  border-radius: 15px;
+	}
+	
+	.status_btn{
+	  border: none;
+	  margin-left: 500px;
+	  font-size: 16px;
+	}
+	
+	.ans_btn { 
+	  border: none; 
+	  font-size: 16px;
+	  background-color: rgba(0,0,0,0);
+	}
+	
+	#sglist {
+	  max-width: 1200px; 
+	  margin: 80px auto;
+	  padding: 0 20px;
+	}
+	
+	.board_list {
+	  width: 100%;
+	  border-collapse: collapse;
+	  border-top: 2px solid #000;  
+	}
+	
+	.board_list th,
+	.board_list td {
+	  padding: 15px 0;
+	  text-align: center;
+	  font-size: 15px;
+	  border-bottom: 1px solid #ddd;
+	}
+	
+	.board_list thead tr {
+	  border-bottom: 1px solid #999;
+	}
+	
+	.board_list th {
+	  font-weight: 600;
+	}
+	
+	.board_list .num {
+	  width: 10%;
+	}
+	
+	.board_list .title {
+	  width: 60%;
+	  text-align: left;
+	}
+	.board_list .title a {
+	  color: #2c2c2c;
+	  text-decoration: none;
+	}
+	
+	.board_list thead .title {
+	  text-align: center;
+	}
+	
+	.board_list .date {
+	  width: 10%;
+	}
+	
+	.board_list .status {
+	  width: 10%;
+	}
+	#paging{
+	   width: 100%;
+	}
+	.center { 
+	  text-align: center;
+	  margin-top: 20px;
+	}
+	.pagina {
+	  display: inline-block;
+	
+	}
+	.pagina a {
+	  color: black;
+	  float: left;
+	  padding: 8px 16px;
+	  text-decoration: none;
+	  transition: background-color .3s;
+	  margin: 0 4px;
+	}
+	.pagina a.active {
+	  background-color: #A5A5A5;
+	  color: white;
+	  border: 1px solid #A5A5A5;
+	}
+	
+	.pagina a:hover:not(.active) {background-color: #ddd;} 
+</style> 
 </head>
 <body>
 <%@ include file="../../include/header.jsp" %>
@@ -147,8 +147,8 @@ html {
           <input class="search_input" name="sg_title" type="text"  placeholder="제목을 입력하세요.">
           <input class="search_btn" type="submit" value="검색" style="font-size:15px">
           <span class="status_btn">
-          <input class="search_btn" type="submit" name="sgStatus" value="미답변">
-          <input class="search_btn" type="submit"  name="sgStatus" value="답변완료">
+          <input class="ans_btn" type="submit" name="sgStatus" value="미답변">
+          <input class="ans_btn" type="submit"  name="sgStatus" value="답변완료">
           </span>
       </div>
       </form>

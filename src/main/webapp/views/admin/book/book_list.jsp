@@ -32,13 +32,13 @@
     .search input[type="submit"] {
         padding: 10px 20px;
         border: none;
-        background-color: #5cb85c;
+        background-color: rgb(224, 195, 163);
         color: white;
         border-radius: 5px;
         cursor: pointer;
     }
     .search input[type="submit"]:hover {
-        background-color: #4cae4c;
+        background-color: #c7ad91;
     }
     .book_list {
         margin-top: 20px;
@@ -70,12 +70,12 @@
         border-radius: 5px;
     }
     .pagination a.active {
-        background-color: #5cb85c;
+        background-color: rgb(224, 195, 163);;
         color: white;
-        border-color: #5cb85c;
+        border-color: rgb(224, 195, 163);;
     }
     .pagination a:hover {
-        background-color: #4cae4c;
+        background-color: #c7ad91;
         color: white;
     }
 </style>
@@ -129,7 +129,7 @@
                               	</td>
                                 <td><form action="/book/delete" method="post">
 		                            	<input type="hidden" name="books_no" value="<%= row.get("books_no") %>">
-		                            	<input type="submit" value="삭제" onclick= "delect_list()">
+		                            	<input type="submit" value="삭제">
 		                            </form>
 	                           </td>
                             </tr>

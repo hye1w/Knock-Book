@@ -46,21 +46,21 @@ public class BookTextEndServlet extends HttpServlet {
             bt.setBook_content(content);
             bt.setRecommendation_no(recommendation_no);
             bt.setBook_no(book_no);
-            bt.setUser_no(user_btend.getUser_no()); // 세션에서 가져온 사용자 정보 사용
+            bt.setUser_no(user_btend.getUser_no()); 
 
             int result = new BookTextDao().inputBookText(bt);
 
             response.setContentType("text/html; charset=UTF-8");
             PrintWriter writer = response.getWriter();
             if (result > 0) {
-                // 성공 시 alert 창 띄우고 리디렉션
+
                 writer.println("<script>alert('독후감 작성이 완료되었습니다.'); location.href='/user/textList';</script>");
             } else {
                 writer.println("<script>alert('오류가 발생했습니다.'); location.href='/user/bookList';</script>");
             }
             writer.close();
         } else {
-            // 세션이 없으면 로그인 페이지로 리다이렉트
+
             response.sendRedirect("/views/member/user/login.jsp");
         }
 

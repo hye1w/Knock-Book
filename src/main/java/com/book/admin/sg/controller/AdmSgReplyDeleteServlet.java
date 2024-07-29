@@ -27,7 +27,7 @@ public class AdmSgReplyDeleteServlet extends HttpServlet {
 		int sgNo = Integer.parseInt(request.getParameter("sg_no"));
 		
 		if(result > 0) {
-			System.out.println("성공");
+			
 			response.sendRedirect(request.getContextPath() + "/admin/sg/detail?sg_no=" + sgNo);
 		}
 	}

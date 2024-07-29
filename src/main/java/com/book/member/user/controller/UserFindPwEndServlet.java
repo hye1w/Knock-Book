@@ -18,7 +18,7 @@ import com.book.member.user.vo.User;
 public class UserFindPwEndServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    // GET 요청을 처리하도록 doGet 메소드 추가
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher dispatcher = request.getRequestDispatcher("/views/user/findpw.jsp");
         dispatcher.forward(request, response);
@@ -27,9 +27,7 @@ public class UserFindPwEndServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String id = request.getParameter("id");
         String email = request.getParameter("email");
-        System.out.println(id);
-        System.out.println(email);
-        // 세션에서 인증 코드 가져오기
+
         HttpSession session = request.getSession();
         String sessionCode = (String) session.getAttribute("verificationCode");
         String inputCode = request.getParameter("email_number");

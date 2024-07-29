@@ -28,13 +28,9 @@ public class BookDeleteServlet extends HttpServlet {
 		
 
 		int bookno = Integer.parseInt(request.getParameter("books_no")); 
-		 
+	
 		int result = new BookDao().deleteBook(bookno);
-	    if (result > 0) {
-	        System.out.println("도서 정보가 성공적으로 삭제되었습니다.");
-	    } else {
-	        System.out.println("도서 정보 수정에 실패했습니다.");
-	    }
+	 
 		RequestDispatcher view = null;
 			view = request.getRequestDispatcher("/book/list");
 			view.forward(request, response);

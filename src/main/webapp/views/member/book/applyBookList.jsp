@@ -181,7 +181,9 @@
         <div class="search">
 
             <form class="search_board_form" action="/book/applyList" method="get">
-                <input type="text" name="apply_bk_title" placeholder="신청도서이름을 입력해주세요">
+               <input type="text" name="apply_bk_title" 
+       value="<%= request.getAttribute("searchContent") != null ? request.getAttribute("searchContent") : "" %>" 
+       placeholder="신청도서이름을 입력해주세요">
                <input type="submit" value="검색">
                
 

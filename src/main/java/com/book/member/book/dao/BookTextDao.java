@@ -58,8 +58,7 @@ public class BookTextDao {
             if(content != null) {
                 sql += " WHERE d.books_title LIKE CONCAT('%','"+content+"','%')";
             }
-            // 추천도가 선택된 경우 SQL에 조건을 추가합니다.
-            System.out.println(recommendation);
+
             if (recommendation != null && !recommendation.isEmpty() && !"0".equals(recommendation)) {
                 sql += " AND c.recommendation_no = '"+recommendation+"'";
 
@@ -112,8 +111,7 @@ public class BookTextDao {
             if(content != null) {
                 sql += " AND d.books_title LIKE CONCAT('%','"+content+"','%')";
             }
-            // 추천도가 선택된 경우 SQL에 조건을 추가합니다.
-            System.out.println(recommendation);
+           
             if (recommendation != null && !recommendation.isEmpty() && !"0".equals(recommendation)) {
                 sql += " AND c.recommendation_no = '"+recommendation+"'";
 
@@ -123,7 +121,7 @@ public class BookTextDao {
 
             pstmt = conn.prepareStatement(sql);
             pstmt.setInt(1,userNo);
-            pstmt.setTimestamp(2, Timestamp.valueOf(LocalDateTime.now().minusHours(1)));
+            pstmt.setTimestamp(2, Timestamp.valueOf(LocalDateTime.now().minusDays(7)));
             rs = pstmt.executeQuery();
 
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -305,7 +303,6 @@ public class BookTextDao {
             if(rs.next()) {
 
                 result = rs.getInt("cnt");
-                System.out.println(result);
             }
         }catch(Exception e) {
             e.printStackTrace();
@@ -416,7 +413,7 @@ public class BookTextDao {
             while(rs.next()){
                 Timestamp start = rs.getTimestamp("읽기시작");
                 Timestamp end = rs.getTimestamp("읽기종료");
-                System.out.println(rs.getInt("카테고리번호"));
+                
                 Map<String, String> row = new HashMap<>();
                 row.put("bt_no", rs.getString("독후감번호"));
                 row.put("bk_title", rs.getString("도서제목"));

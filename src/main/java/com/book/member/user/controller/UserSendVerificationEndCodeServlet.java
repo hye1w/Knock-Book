@@ -21,7 +21,7 @@ public class UserSendVerificationEndCodeServlet extends HttpServlet {
         request.getSession().setAttribute("verificationCode", code);
         response.getWriter().write("success");
     }
-//무조건 math.random 으로
+
     String generateVerificationCode() {
         int code = (int) (Math.random() * 900000) + 100000;
         return String.valueOf(code);

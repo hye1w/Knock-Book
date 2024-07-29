@@ -18,7 +18,6 @@ import com.book.member.sg.vo.Suggestion;
 
 public class SgMemDao {
 	
-	// 문의사항 게시글 작성
 	public int createSg(Suggestion sgOp) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -47,7 +46,7 @@ public class SgMemDao {
 		}
 		return result;
 	}
-	// 문의사항 게시물 조회 및 검색
+
 	public List<Suggestion> selectSgList(Suggestion sgOp, String sgSort) {
 	    Connection conn = null;
 	    PreparedStatement pstmt = null;
@@ -103,7 +102,6 @@ public class SgMemDao {
 	}
 
 
-	// 문의사항 페이징바
 	public int selectSgCount(Suggestion sgOp) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -131,7 +129,7 @@ public class SgMemDao {
 		}
 		return result;
 	}
-	// 문의사항 상세조회
+
 	public Suggestion detailSg(Suggestion sgOp) {
 		Suggestion sg = null;
 		Connection conn = null;
@@ -170,7 +168,7 @@ public class SgMemDao {
 		return sg;
 	}
 	
-	// 댓글 목록 뽑기
+
 			public List<SuggestionReply> getReplyList(int sgNo) {
 			    Connection conn = null;
 			    PreparedStatement pstmt = null;
@@ -205,8 +203,7 @@ public class SgMemDao {
 			}
 			
 	
-	
-	// 문의사항 상세조회글 삭제
+
 	public int deleteSg(Suggestion sgOp) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;

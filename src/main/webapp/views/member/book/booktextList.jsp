@@ -132,78 +132,78 @@
             display: block;
             margin-top: 1vw;
         }
-.search {
-    width:100%;
-    display: flex;
-    justify-content: center; /* 중앙 정렬 */
-    align-items: center; /* 수직 정렬 */
-    margin-bottom: 20px;
-    background-color:white;
-}
-
-.search_board_form {
-    display: flex;
-    gap: 10px; /* 폼 요소 간의 간격 */
-    align-items: center; /* 수직 정렬 */
-    width:40vw;
-    background-color:white;
-}
-
-.search input[type="text"] {
-    padding: 10px;
-    width: 30vw; /* 고정 너비 */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.search select {
-    padding: 10px;
-    margin-left:15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    width: 8vw;
-}
-
-.search input[type="submit"] {
-    background-color: rgb(224, 195, 163);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-  
-}
-.search input[type="submit"]:hover {
-    background-color: gray;
-}
-
-        @media (max-width: 768px) {
-            .ele_bw {
-                width: calc(50% - 20px); /* 화면이 작을 때는 2개씩 정렬 */
-            }
-        }
- .holeList {
-        font-family: 'LINESeedKR-Bd'; 
-        max-width: 1000px;
-        margin: 2rem auto;
-        padding: 1rem 1rem;
-        background-color: white;
-        box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
-        border-radius: 20px;
-      }
+		.search {
+		    width:100%;
+		    display: flex;
+		    justify-content: center; /* 중앙 정렬 */
+		    align-items: center; /* 수직 정렬 */
+		    margin-bottom: 20px;
+		    background-color:white;
+		}
+		
+		.search_board_form {
+		    display: flex;
+		    gap: 10px; /* 폼 요소 간의 간격 */
+		    align-items: center; /* 수직 정렬 */
+		    width:40vw;
+		    background-color:white;
+		}
+		
+		.search input[type="text"] {
+		    padding: 10px;
+		    width: 30vw; /* 고정 너비 */
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    box-sizing: border-box;
+		}
+		
+		.search select {
+		    padding: 10px;
+		    margin-left:15px;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    box-sizing: border-box;
+		    width: 8vw;
+		}
+		
+		.search input[type="submit"] {
+		    background-color: rgb(224, 195, 163);
+		    color: white;
+		    border: none;
+		    padding: 10px 20px;
+		    cursor: pointer;
+		    border-radius: 4px;
+		  
+		}
+		.search input[type="submit"]:hover {
+		    background-color: gray;
+		}
+		
+		        @media (max-width: 768px) {
+		            .ele_bw {
+		                width: calc(50% - 20px); /* 화면이 작을 때는 2개씩 정렬 */
+		            }
+		        }
+		 .holeList {
+		        font-family: 'LINESeedKR-Bd'; 
+		        max-width: 1000px;
+		        margin: 2rem auto;
+		        padding: 1rem 1rem;
+		        background-color: white;
+		        box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+		        border-radius: 20px;
+		      }
         .center {
-        text-align: center;
-        margin-top: 20px;
-    }
-    	.word h3 {
-         margin: 30px 0px;
-         text-align: center;
-         font-size: 30px;
-           font-weight: bold;
-           background-color: white;
-	}
+	        text-align: center;
+	        margin-top: 20px;
+	    }
+	    	.word h3 {
+	         margin: 30px 0px;
+	         text-align: center;
+	         font-size: 30px;
+	           font-weight: bold;
+	           background-color: white;
+		}
       
     </style>
 

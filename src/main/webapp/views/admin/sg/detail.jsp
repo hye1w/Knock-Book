@@ -11,165 +11,166 @@
 <meta charset="UTF-8">
 <title>관리자 문의사항 상세 조회</title>
 <style>
-body {
-  height: 100%;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-.container {
-    width: 60%;
-    margin: auto;
-    overflow: hidden;
-    padding: 80px;
-    position: relative;
-}
-
-.sg_post_detail {
-  width: 100%;
-  background: #ffffff;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border: 1px solid #ccc;
-}
-
-#sg_post_title {
-  color: #2c3e50;
-  margin-bottom: 10px;
-  background: transparent;
-}
-
-.sg_post_info {
-  font-size: 16px;
-  color: #7f8c8d;
-  margin-bottom: 20px;
-  background: transparent;
-}
-
-#sg_post_date {
-  border-bottom: 1px solid #e0e0e0;
-  display: block;
-  margin-bottom: 10px;
-  background: transparent;
-}
-
-#sg_post_content {
-  color: #575756;
-  padding-top: 15px;
-  background: transparent;
-}
-
-.replyList {
-    border-top: solid 1px;
-    margin-top: 20px;
-}
-
-.replyContent {
-   width: 95%;
-   padding: 10px;
-   resize: none;
-   margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.reply{
-  width: 80%;
-  padding: 30px;
-}
-
-.addText{
-   text-align: center;
-}
-
-.write{
-  width: 95%;
-  height: 100px;
-  padding: 20px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  resize: none;
-  overflow: auto;
-}
-
-.write:focus {
-  outline: none;
-  border: none;
-}
-
-#replyDate{
-margin-left:30px;
-}
-
-#nickname{
-margin-top:20px;
-}
-
-#btn_gr {
-    gap: 10px;
-    display: flex;
-    justify-content: right;
-    margin-right: 30px;
-}
-
-.imgContain {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 300px; 
-}
-
-.imgContain img {
-  height: 100%;
-  width: 200px;
-  object-fit: cover;
-  margin: 0 5px;
-}
-
-.listBtn{
-  width: 50px;
-  height: 30px;
-  border-radius: 15%;
-  text-align: center;
-  background: #575756;
-  color: #fffbfb;
-  font-size: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  text-decoration: none;
-  border: none;
-  float: right;
-}
-
-.sgBtn{
-  width: 50px;
-  height: 30px;
-  border-radius: 15%;
-  text-align: center;
-  background: #575756;
-  color: #fffbfb;
-  font-size: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  text-decoration: none;
-  border: none;
-}
-
-
-.sgBtn:hover {
-  background: #18283235;
-}
-#basicReply{
-   width:130px
-}
+	body {
+	  height: 100%;
+	  line-height: 1.6;
+	  margin: 0;
+	  padding: 0;
+	  background-color: #f4f4f4;
+	}
+	
+	.container {
+	    width: 60%;
+	    margin: auto;
+	    overflow: hidden;
+	    padding: 80px;
+	    position: relative;
+	}
+	
+	.sg_post_detail {
+	  width: 100%;
+	  background: #ffffff;
+	  padding: 20px;
+	  margin-bottom: 20px;
+	  border-radius: 5px;
+	  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	  border: 1px solid #ccc;
+	}
+	
+	#sg_post_title {
+	  color: #2c3e50;
+	  margin-bottom: 10px;
+	  background: transparent;
+	}
+	
+	.sg_post_info {
+	  font-size: 16px;
+	  color: #7f8c8d;
+	  margin-bottom: 20px;
+	  background: transparent;
+	}
+	
+	#sg_post_date {
+	  border-bottom: 1px solid #e0e0e0;
+	  display: block;
+	  margin-bottom: 10px;
+	  background: transparent;
+	}
+	
+	#sg_post_content {
+	  color: #575756;
+	  padding-top: 15px;
+	  background: transparent;
+	}
+	
+	.replyList {
+	    border-top: solid 1px;
+	    margin-top: 20px;
+	}
+	
+	.replyContent {
+	   width: 95%;
+	   padding: 10px;
+	   resize: none;
+	   margin-top: 10px;
+	    margin-bottom: 10px;
+	}
+	
+	.reply{
+	  width: 80%;
+	  padding: 30px;
+	}
+	
+	.addText{
+	   text-align: center;
+	}
+	
+	.write{
+	  width: 95%;
+	  height: 100px;
+	  padding: 20px;
+	  border-radius: 5px;
+	  border: 1px solid #ccc;
+	  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	  resize: none;
+	  overflow: auto;
+	}
+	
+	.write:focus {
+	  outline: none;
+	  border: none;
+	}
+	
+	#replyDate{
+	margin-left:30px;
+	}
+	
+	#nickname{
+	margin-top:20px;
+	}
+	
+	#btn_gr {
+	    gap: 10px;
+	    display: flex;
+	    justify-content: right;
+	    margin-right: 30px;
+	}
+	
+	.imgContain {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  height: 300px; 
+	}
+	
+	.imgContain img {
+	  height: 100%;
+	  width: 200px;
+	  object-fit: cover;
+	  margin: 0 5px;
+	}
+	
+	.listBtn{
+	  width: 50px;
+	  height: 30px;
+	  border-radius: 15%;
+	  text-align: center;
+	  background: #575756;
+	  color: #fffbfb;
+	  font-size: 14px;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  cursor: pointer;
+	  text-decoration: none;
+	  border: none;
+	  float: right;
+	}
+	
+	.sgBtn{
+	  width: 50px;
+	  height: 30px;
+	  border-radius: 15%;
+	  text-align: center;
+	  background: #575756;
+	  color: #fffbfb;
+	  font-size: 14px;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  cursor: pointer;
+	  text-decoration: none;
+	  border: none;
+	}
+	
+	
+	.sgBtn:hover {
+	  background: #18283235;
+	}
+	
+	#basicReply{
+	   width:130px
+	}
 </style>
 </head>
 <body>

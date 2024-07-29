@@ -92,7 +92,8 @@ public class GetEventRegular implements Job {
         }
 
         // 가져온 데이터가 현재 시간과 일치하는지 확인
-        if (result.size() != 0) { 
+        if (result.size() != 0) {
+         /* System.out.println("알림 : " + result.size()); */
             for (int i = 0; i < result.size(); i++) {
                 String eventStartStr = (String) result.get(i).get("event_start");
                 LocalDateTime eventStart = LocalDateTime.parse(eventStartStr);

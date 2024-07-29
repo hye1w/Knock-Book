@@ -5,94 +5,113 @@
 <head>
 <meta charset="UTF-8">
 <title>Knock Book</title>
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
-} 
- 
-#right {
-	margin-left : 350px;
-    width: 60%;
-    padding: 40px;
-    box-sizing: border-box;
-}
+<style>  
+	::-webkit-scrollbar {
+		display: none;
+	}  
 
-#my {
-    list-style: none;
-    padding: 0;
-}
-
-#my li {
-    margin: 10px 0;
-}
-
-.book_icon {
-    background-color: #e0e0e0;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.book {
-    background-color: #ffffff; 
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;  
-}
-
-.book h2 {
-    margin-top: 0;
-}
-
-.book form {
-    display: flex;
-    flex-direction: column;
-}
-
-.book label {
-    margin-top: 10px;
-}
-
-.book input[type="text"],
-.book select {
-    margin-top: 5px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.book .form-group {
-    margin-top: 10px;
-}
-
-.book .buttons {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    display: flex;
-    gap: 10px;
-}
-
-.book .buttons input[type="button"] {
-    padding: 8px 12px; 
-    border: none;
-    border-radius: 4px;
-    background-color: #007BFF;
-    color: white;
-    font-size: 14px;  
-    cursor: pointer;
-}
-
-.book .buttons input[type="button"]:last-child {
-    background-color: #dc3545;
-}
-
-.book .buttons input[type="button"]:hover {
-    opacity: 0.8;
-}
+    body {
+        font-family: 'Noto Sans KR', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f6f8;
+        color: #333; 
+        align-items: center;
+        marign-left : 150px;
+        -ms-overflow-style: none;
+    } 
+    
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100%;
+        margin-left : 550px;
+    }
+    
+    #right { 
+        width: 100%;
+        max-width: 900px;
+        padding: 40px; 
+    }
+    
+    .book { 
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .book h2 {
+        margin-top: 0;
+        margin-bottom: 25px;
+        color: #2c3e50;
+        font-size: 24px;
+    }
+    
+    .book form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .book label {
+        margin-top: 5px;
+        font-weight: 500;
+        color: #34495e;
+    }
+    
+    .book input[type="text"],
+    .book select {
+        margin-top: 8px;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+    }
+    
+    .book input[type="text"]:focus,
+    .book select:focus {
+        outline: none;
+        border-color: #3498db;
+    }
+    
+    .book hr {
+        margin: 20px 0;
+        border: none;
+        border-top: 1px solid #eee;
+    }
+    
+    .book .buttons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        width : 
+        margin-top: 25px;
+    }
+    
+    .book .buttons input[type="button"] {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .book .buttons input[type="button"]:first-child {
+        background-color: #3498db;
+        color: white;
+    }
+    
+    .book .buttons input[type="button"]:last-child {
+        background-color: #e74c3c;
+        color: white;
+    }
+    
+    .book .buttons input[type="button"]:hover {
+        opacity: 0.9;
+    }
 </style>
 <body>
  <%@ include file="../../include/header.jsp" %>
@@ -102,19 +121,19 @@ body {
             <div class="book">
                 <form action="/book/createEnd" name="book_request_form" method="post">
 
-                    <label for="img_up">이미지 등록:</label>
+                    <label for="img_up">이미지 등록</label>
                     <input type="text" name="img_up" placeholder="이미지url을 입력하세요">
                     <hr>
-                    <label for="book_title">도서명: </label>
+                    <label for="book_title">도서명</label>
                     <input type="text" name="book_title" id="book_title" placeholder="도서명을 입력하세요">
                     <hr>
-                    <label for="book_author">저자: </label>
+                    <label for="book_author">저자</label>
                     <input type="text" name="book_author" id="book_author" placeholder="저자를 입력하세요">
                     <hr>
-                    <label for="book_publihser">출판사: </label>
+                    <label for="book_publihser">출판사</label>
                     <input type="text" name="book_publihser" id="book_publihser" placeholder="출판사를 입력하세요">
                     <hr>
-                    <label for="book_category">카테고리: </label>
+                    <label for="book_category">카테고리</label>
                     <select name="book_category" id="book_category">
                         <option value="0">선택안함</option>
                         <option value="1">총류</option>
@@ -129,8 +148,10 @@ body {
                         <option value="10">역사</option>
                     </select>
                     <hr>
-                    <input type="button" value="등록" onclick="book_plus();">
-                    <input type="button" value="초기화" onclick="book_reset();">
+                    <div class="buttons">
+                        <input type="button" value="등록" onclick="book_plus();">
+                        <input type="button" value="초기화" onclick="book_reset();">
+                    </div> 
                 </form>
             </div>
         </div>

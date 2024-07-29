@@ -20,12 +20,13 @@
         align-items: left;
         max-width: 800px;
         margin: 0 auto;
+        padding : 10px;
     }
     
     .book_title {
         font-size: 24px;
         font-weight: bold;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         text-align: center;
     }
     
@@ -46,8 +47,7 @@
     
     .book_details {
         flex: 1;
-        text-align: left;
-        margin-top : 50px;
+        text-align: left; 
         margin-left : 10px;
     }
     
@@ -67,8 +67,22 @@
         margin-top: 40px;
         text-align: left; 
     }
- 
-		
+  
+	.button-group {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin : 20px 50px 20px 0; 
+    }
+    
+    .button-group form {
+        margin: 0;
+    }
+    
+    .button-group button {
+        width: 80px;
+    }
+    
 	.replyCount{
 		margin-bottom: 20px;
 	}
@@ -183,6 +197,14 @@
 		border-radius: 10px;
 	}
 	
+	.list_under_content {
+		background-color: rgba(194, 194, 194, 0.3); 
+		padding : 3px 2px 1px 15px;
+		border-radius: 10px;
+		width : 60px;
+		margin-bottom: 15px;
+	}
+	
 	.detail_under { 
 		margin-left : 10px;
 		padding : 3px 2px 1px 1px;
@@ -235,7 +257,7 @@
 				        </div>
 				    </div>
 				    <div class="book_description"> 
-				    	<div class="list_under">내용</div>
+				    	<div class="list_under_content">내용</div>
 				        <span><%= detail.get("bt_content") %></span>
 				    </div>
 				</div>
@@ -246,6 +268,7 @@
                    String a = detail.get("user_no");
                    String str = Integer.toString(user_bt.getUser_no());
                    if (a.equals(str)) { %>
+                   <div class="button-group">
                      <form action="/user/editCheck" method="post">
                       <input type="hidden" name="bt_no" value="<%= detail.get("bt_no") %>">
                       <button type="submit" class="btn btn-primary">수정</button>
@@ -253,14 +276,19 @@
                      <form action="/user/textDelete" method="post">
                      <input type="hidden" name="bt_no" value="<%= detail.get("bt_no") %>">
                      <button type="submit" class="btn btn-danger">삭제</button>
-                  </form>
+                  	</form>
+                  </div>
                 <% } %>
           <% } %>
                 <style>
+                #heart_area {
+                	margin-left: 10%;
+                	margin-bottom: 20px;
+                }
                   #heart{
-                      width: 20px;
-                   background-color: white;
-                   margin-bottom: 8px;
+                       width: 20px;
+	                   background-color: white;
+	                   margin-bottom: 8px; 
                   }
                   .red{fill: red;}
                   .gray{fill: gray;}
@@ -271,7 +299,7 @@
                      margin-left: 5px;
                   }
               </style>
-              <div style="background-color: white">
+              <div style="background-color: white" id="heart_area">
               <%-- 하트의 class명에 받아온 color값을 넣어서 class가 gray냐 red냐에 따라 css로 하트 색 바꿈 --%>
                  <svg id="heart" class="<%= request.getAttribute("color") %>"
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">

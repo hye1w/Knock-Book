@@ -49,7 +49,6 @@ public class MemEventParServlet extends HttpServlet {
         } else if ("대기 취소".equals(action)) {
             memEventDao.cancelWaiting(eventNo, userNo);
         } 
-		
-		System.out.println(action);
+
 	}
 }

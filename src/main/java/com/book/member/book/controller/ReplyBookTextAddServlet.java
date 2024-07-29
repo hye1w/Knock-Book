@@ -30,8 +30,6 @@ public class ReplyBookTextAddServlet extends HttpServlet {
         if(result > 0) {
 
             response.sendRedirect(request.getContextPath() + "/book/detail?bt_no="+btNo);
-        }else {
-            System.out.println("실패");
         }
     }
 

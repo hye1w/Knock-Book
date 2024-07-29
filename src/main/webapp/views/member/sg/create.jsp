@@ -13,107 +13,112 @@
    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
    crossorigin="anonymous" />
 <style>
-* {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-}
-
-body {
-   background-color: rgb(247, 247, 247);
-}
-.form {
-   background-color: white;
-}
-#create_sg_form{
-   margin : 30px;
-}
-.sgDiv {
-   display: flex;
-   flex-direction: column;
-   padding: 30px;
-   margin-top: 20px;
-   width: 600px;
-   margin: 0 auto;
-}
-
-.sgTitle {
-   width: 100%;
-   height: 50px;
-   padding: 10px;
-   line-height: 1.5;
-   border: 1px solid #575756;
-   border-radius: 15px;
-   background: #fff;
-   font-size: 1.2vw;
-   outline: none;
-   resize: none;
-   overflow-wrap: break-word;
-   margin-bottom: 10px;
-}
-
-#sgForm {
-   width: 600px;
-   height: 550px;
-}
-
-.sgWrite {
-   width: 100%;
-   height: 480px;
-   padding: 10px;
-   line-height: 1.5;
-   border: 1px solid #575756;
-   border-radius: 15px;
-   background: #fff;
-   font-size: 1.2vw;
-   outline: none;
-   resize: none;
-   overflow-wrap: break-word;
-   margin-bottom: 10px;
-}
-
-.image-preview {
-   display: inline-block;
-   margin: 5px;
-}
-
-.image-preview img {
-   width: 150px;
-   height: 200px;
-   object-fit: cover;
-}
-
-#btn_gr {
-    gap: 10px;
-    display: flex;
-    justify-content: right;
-    margin-right: 30px;
-}
-
-#imgBtn{
-margin-top:15px;
-margin-bottom:15px;
-}
-
-.btn {
-  width: 50px;
-  height: 30px;
-  border-radius: 15%;
-  text-align: center;
-  background: #575756;
-  color: #fffbfb;
-  font-size: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  text-decoration: none;
-  border: none;
-}
-
-.btn:hover {
-   background: #18283235;
-}
+	* {
+	   margin: 0;
+	   padding: 0;
+	   box-sizing: border-box;
+	} 
+	
+	::-webkit-scrollbar {
+		display: none;
+	} 
+	
+	body {
+	   background-color: rgb(247, 247, 247);
+	   -ms-overflow-style: none;
+	}
+	.form {
+	   background-color: white; 
+	}
+	#create_sg_form{
+	   margin : 30px; 
+	}
+	.sgDiv {
+	   display: flex;
+	   flex-direction: column;
+	   padding: 30px;
+	   margin-top: 20px;
+	   width: 600px;
+	   margin: 0 auto;
+	}
+	
+	.sgTitle {
+	   width: 100%;
+	   height: 50px;
+	   padding: 10px;
+	   line-height: 1.5;
+	   border: 1px solid #575756;
+	   border-radius: 15px;
+	   background: #fff;
+	   font-size: 18px;
+	   outline: none;
+	   resize: none;
+	   overflow-wrap: break-word;
+	   margin-bottom: 10px;
+	}
+	
+	#sgForm {
+	   width: 600px;
+	   height: 550px;
+	}
+	
+	.sgWrite {
+	   width: 100%;
+	   height: 480px;
+	   padding: 10px;
+	   line-height: 1.5;
+	   border: 1px solid #575756;
+	   border-radius: 15px;
+	   background: #fff;
+	   font-size: 18px;
+	   outline: none;
+	   resize: none;
+	   overflow-wrap: break-word; 
+	   margin-bottom: 10px;
+	}
+	
+	.image-preview {
+	   display: inline-block;
+	   margin: 5px;
+	}
+	
+	.image-preview img {
+	   width: 150px;
+	   height: 200px;
+	   object-fit: cover;
+	}
+	
+	#btn_gr {
+	    gap: 10px;
+	    display: flex;
+	    justify-content: right;
+	    margin-right: 30px;
+	}
+	
+	#imgBtn{
+	margin-top:15px;
+	margin-bottom:15px;
+	}
+	
+	.btn {
+	  width: 50px;
+	  height: 30px;
+	  border-radius: 15%;
+	  text-align: center;
+	  background: #575756;
+	  color: #fffbfb;
+	  font-size: 14px;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  cursor: pointer;
+	  text-decoration: none;
+	  border: none;
+	}
+	
+	.btn:hover {
+	   background: #18283235;
+	}
 </style>
 </head>
    <%

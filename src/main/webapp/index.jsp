@@ -15,7 +15,13 @@
 <title>Knock Book</title> 
 <style>
 @charset "UTF-8";
-	 
+	 body { 
+	    -ms-overflow-style: none;
+	}
+	
+	::-webkit-scrollbar {
+		display: none;
+	} 
 	main {
 	    max-width: 1200px;
 	    margin: 2rem auto;
@@ -80,17 +86,17 @@
 	    width: 40%;
 	    height: 90%; 
 	    border-radius: 30px;
-	    background-color: rgba(181, 181, 181, 0);
+	    background-color: rgba(181, 181, 181, 0); 
 	}
 	
 	.slide-image {
 	    width: 80%;
 	    height: 100%;
 	    object-fit: cover;
-	    border-radius: 20px;
-	    margin-top: 3%;
+	    border-radius: 18px;
+	    margin-top: 4%;
 	    margin-bottom: 3%;
-	    margin-left: 3%;
+	    margin-left: 5%;
 	}
 	
 	.event-section {

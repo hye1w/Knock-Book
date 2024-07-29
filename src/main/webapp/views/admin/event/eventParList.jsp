@@ -33,6 +33,14 @@
          font-size: 30px;
     }
 
+	#evPar_Btn { 
+		background-color: rgb(224, 195, 163);
+	}
+	
+	#evPar_Btn:hover { 
+		background-color: #c7ad91;
+	}
+	 
     .event_list_table {
       margin-top :30px;
       width: 100%;
@@ -120,9 +128,9 @@
     }
 
     .pagination a.active {
-        background-color: #A5A5A5;
+        background-color: rgb(224, 195, 163);
         color: white;
-        border: 1px solid #A5A5A5;
+        border: 1px solid rgb(224, 195, 163);
     }
 
     .pagination a:hover:not(.active) {
@@ -184,7 +192,7 @@
                                 }
                             %>
                         </select>
-                        <input class="btn btn-outline-warning" type="submit" value="검색">
+                        <input class="btn" id="evPar_Btn" type="submit" value="검색">
                     </form>
                 </div>
 
@@ -215,12 +223,14 @@
                             </thead>
                             <tbody>
                                 <% 
-                                    List<Map<String, String>> list = (List<Map<String, String>>) request.getAttribute("userEvents"); 
-                                    for (int i = 0; i < list.size(); i++) {
-                                        Map<String, String> row = list.get(i);
+	                                List<Map<String, String>> list = (List<Map<String, String>>) request.getAttribute("userEvents");
+	                                Paging paging = (Paging) request.getAttribute("paging");
+	                                int startNum = (paging.getNowPage() - 1) * paging.getNumPerPage() + 1;
+	                                for (int i = 0; i < list.size(); i++) {
+	                                    Map<String, String> row = list.get(i);
                                 %>
                                 <tr style="cursor: pointer;" onclick="location.href='/event/detail?eventNo=<%=row.get("event_no")%>&eventType=<%=row.get("event_form")%>'">
-                                    <td><%=i + 1%></td>
+                                    <td><%=startNum + i%></td>
                                     <td><%=row.get("user_name")%></td>
                                     <td><%=row.get("event_title")%></td>
                                     <td><%=row.get("event_progress").substring(0, 10)%></td>

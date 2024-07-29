@@ -31,8 +31,6 @@ public class AdmBasicReplyDeleteServlet extends HttpServlet {
 			 PrintWriter writer = response.getWriter();
 			 writer.println("<script>alert('삭제 되었습니다!'); location.href='/admin/sg/basic?user_no=1';</script>");
 			 writer.close();
-		}else {
-			System.out.println("실패");
 		}
 	}
 

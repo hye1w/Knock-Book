@@ -16,9 +16,12 @@
         -ms-overflow-style: none;
     }
     ::-webkit-scrollbar {
-     display: none;
-   } 
-
+     	display: none;
+    } 
+	
+	a:hover {
+		text-decoration: none;
+	}
     main {
         font-family: 'LINESeedKR-Bd'; 
         max-width: 1000px;

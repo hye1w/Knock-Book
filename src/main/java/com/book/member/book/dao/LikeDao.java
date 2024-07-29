@@ -114,7 +114,7 @@ public class LikeDao {
         ResultSet rs = null;
         int result = 0;
         try {
-            // Like테이블에서 유저넘버와 독후감넘버가 같은 행 select
+        
             conn.setAutoCommit(false);
             String sql = "SELECT like_no FROM `like` "+
                     "WHERE user_no = ? AND booktext_no = ?";
@@ -123,10 +123,10 @@ public class LikeDao {
             pstmt.setInt(2, booktextNo);
 
             rs = pstmt.executeQuery();
-            // 값이 존재한다면(해당 유저가 이미 좋아요를 눌렀다면)
+          
             if(rs.next()) {
                 result = 1;
-                // 값이 없다면(해당 유저가좋아요를 누르지 않았다면)
+             
             } else {
                 result = 0;
             }

@@ -19,9 +19,8 @@ public class PasswordEncodingWrapper extends HttpServletRequestWrapper{
 		String result = super.getParameter(name);
 		if("pw".equals(name)) {
 			String ori = super.getParameter(name);
-			System.out.println("before : "+ori);
 			String enc = getSHA512(ori);
-			System.out.println("after : "+enc);
+
 			
 			result = enc;
 		}

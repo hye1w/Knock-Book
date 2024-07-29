@@ -16,7 +16,7 @@
        
     <style>
         @charset "UTF-8";
- 
+  
         @font-face {
             font-family: 'GangwonEduPowerExtraBoldA';
             src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
@@ -82,6 +82,10 @@
             background-color: rgb(247, 247, 247);
         }
 
+		.main_header{
+			padding : 0 10px;
+		}
+		
         .main_logo {
             font-size: 30px;
             color: rgb(224, 195, 163);
@@ -106,6 +110,7 @@
 
         #notification-icon {
             position: relative;
+            margin-top:6px;
         }
 
         .notification-count {

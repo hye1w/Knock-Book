@@ -32,19 +32,19 @@
         .search input[type="submit"] {
             padding: 10px 20px;
             border: none;
-            background-color: #5cb85c;
+            background-color: rgb(224, 195, 163);
             color: white;
             border-radius: 5px;
             cursor: pointer;
         }
         .search input[type="submit"]:hover {
-            background-color: #4cae4c;
+            background-color: #c7ad91;
         }
         .book_list {
             margin-top: 20px;
         }
         .book_table {
-              margin-top: 20px;
+            margin-top: 20px;
             width: 100%;
             border-collapse: collapse;
         }
@@ -65,18 +65,17 @@
         .pagination a {
             padding: 10px 15px;
             margin: 0 5px;
-            border: 1px solid #ddd;
-            color: #333;
+            border: 1px solid #ddd;;
             text-decoration: none;
             border-radius: 5px;
         }
         .pagination a.active {
-            background-color: #5cb85c;
+            background-color: rgb(224, 195, 163);
             color: white;
-            border-color: #5cb85c;
+            border-color: rgb(224, 195, 163);
         }
         .pagination a:hover {
-            background-color: #4cae4c;
+            background-color: #c7ad91;
             color: white;
         }
 #section_wrap .search input[type='text'] {

@@ -25,7 +25,6 @@ public class DeleteUserBooktextAlertServlet  extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String bt_no = request.getParameter("bt_no");
 
-        // JavaScript 확인 창을 사용하여 삭제 여부 확인
         response.setContentType("text/html; charset=UTF-8");
         PrintWriter writer = response.getWriter();
 

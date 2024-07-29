@@ -97,7 +97,6 @@ public class MemEventDao {
         return list;
     }
 
-    // 종료된 이벤트 목록 조회  
     public List<Map<String, String>> selectEndedEvents(Event option) {
         List<Map<String, String>> list = new ArrayList<>();
         PreparedStatement pstmt = null;
@@ -139,8 +138,7 @@ public class MemEventDao {
 
         return list;
     } 
-    
-    // 진행 중 이벤트 개수 조회 
+ 
     public int selectOngoingCount(Event option) {
        Connection conn = getConnection();
         int totalCount = 0;
@@ -170,7 +168,7 @@ public class MemEventDao {
         return totalCount;
     } 
     
-    // 진행 종료 이벤트 개수 조회 
+
     public int selectEndedCount(Event option) {
        Connection conn = getConnection();
         int totalCount = 0;
@@ -200,7 +198,7 @@ public class MemEventDao {
         return totalCount;
     }
      
-    // 이벤트 총 개수 조회 메서드
+
     public int selectEventCount(Event option) {
        Connection conn = getConnection();
         int totalCount = 0;
@@ -253,7 +251,7 @@ public class MemEventDao {
         return totalCount;
     } 
     
-    // 이벤트 번호로 조회 메서드
+
     public Event selectEventByNo(int eventNo) {
        Connection conn = getConnection();
         Event event = null;
@@ -298,7 +296,7 @@ public class MemEventDao {
         return event;
     }
     
-    // 이벤트 참여 여부 확인
+
     public boolean checkRegistration(int eventNo, int userNo) {
        Connection conn = getConnection();
         PreparedStatement pstmt = null;
@@ -350,7 +348,7 @@ public class MemEventDao {
        return state;
     }
  
-    // 이벤트 참여자 추가
+
     public void registerForEvent(int eventNo, int userNo) {
         String sql = "INSERT INTO participates (user_no, event_no) VALUES (?, ?)";
         try (Connection conn = getConnection();
@@ -364,7 +362,7 @@ public class MemEventDao {
         }
     }  
    
-   // 이벤트 참여자 삭제
+
     public void cancelRegistration(int eventNo, int userNo) {
         String sql = "DELETE FROM participates WHERE event_no = ? AND user_no = ?";
         try (Connection conn = getConnection();
@@ -372,8 +370,7 @@ public class MemEventDao {
             pstmt.setInt(1, eventNo);
             pstmt.setInt(2, userNo);
             pstmt.executeUpdate();
-            
-           // 취소 후 대기자 자동 등록 처리
+
            autoPromoteWaitingParticipant(eventNo);
            close(conn);
         } catch (Exception e) {
@@ -382,7 +379,6 @@ public class MemEventDao {
     }
 
     
-    // 취소 후 대기자 자동 등록 처리 메서드
     private void autoPromoteWaitingParticipant(int eventNo) {
         String updateSql = "UPDATE participates " +
                            "SET participate_state = 0, participate_date = CURRENT_TIMESTAMP " +
@@ -396,7 +392,7 @@ public class MemEventDao {
             int rowsUpdated = pstmt.executeUpdate();
 
             if (rowsUpdated > 0) {
-                // 대기자 자동 등록이 발생했을 때 이벤트 테이블 업데이트
+
                 updateEventCounts(eventNo);
             }
             close(conn);
@@ -405,7 +401,6 @@ public class MemEventDao {
         }
     }
 
-    // 이벤트 테이블의 event_registered 및 event_waiting 업데이트 
     private void updateEventCounts(int eventNo) {
        Connection conn = getConnection();
         String updateEventSql = "UPDATE events " +
@@ -422,8 +417,7 @@ public class MemEventDao {
         }
     }
  
-    
-    // 이벤트 대기 등록
+
     public void waitForEvent(int eventNo, int userNo) {
         String sql = "INSERT INTO participates (user_no, event_no, participate_state) VALUES (?, ?, ?)";
         try (Connection conn = getConnection();
@@ -438,8 +432,6 @@ public class MemEventDao {
         }
     }
 
-    
-    // 이벤트 대기 취소
     public void cancelWaiting(int eventNo, int userNo) {
         String sql = "DELETE FROM participates WHERE event_no = ? AND user_no = ?";
         try (Connection conn = getConnection();
@@ -452,8 +444,7 @@ public class MemEventDao {
             e.printStackTrace();
         }
     }
-    
-    // 참여 이벤트 수 
+
     public int selectParEventCount(int userNo, String searchKeyword) {
        Connection conn = getConnection();
         PreparedStatement pstmt = null;
@@ -489,8 +480,6 @@ public class MemEventDao {
         return result;
     }
 
-
-    // 참여 이벤트 조회 
     public List<Map<String, String>> getUserEventParticipations(int userNo, int startRow, int numPerPage, String searchKeyword) {
        Connection conn = getConnection();
         List<Map<String, String>> events = new ArrayList<>();

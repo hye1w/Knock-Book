@@ -265,7 +265,7 @@ public class UserDao {
                   rs.getString("user_nickname"),
                   rs.getInt("user_active"),
                   rs.getTimestamp("user_create").toLocalDateTime());
-            System.out.println("dao");
+        
          }
       }catch(Exception e) {
          e.printStackTrace();
@@ -441,7 +441,7 @@ public class UserDao {
             }
            sql += " LIMIT " + u.getLimitPageNo() + ", " + u.getNumPerPage();
            
-           System.out.println("Generated SQL: " + sql);
+   
            
            pstmt = conn.prepareStatement(sql);
            rs = pstmt.executeQuery();
@@ -456,7 +456,7 @@ public class UserDao {
                        rs.getTimestamp("user_create").toLocalDateTime());
                list.add(user);
            }
-           System.out.println(list);
+          
        } catch (Exception e) {
            e.printStackTrace();
        } finally {

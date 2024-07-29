@@ -26,7 +26,7 @@ public class AdmSgReplyUpdateServlet extends HttpServlet {
 				int result = new SgAdmDao().updateReply(replyNo,sgReply);
 				
 				if(result > 0) {
-					System.out.println("성공");
+					
 					response.sendRedirect(request.getContextPath() + "/admin/sg/detail?sg_no=" + sgNo);
 				}
 				

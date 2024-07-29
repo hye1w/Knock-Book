@@ -48,11 +48,10 @@ public class UserLoginEndServlet extends HttpServlet {
                 session.setAttribute("user", u);
                 session.setMaxInactiveInterval(60 * 30);
             }
-            
-            // 사용자 역할에 따라 다른 페이지로 이동
-            if (u.getUser_no() == 1) { // 관리자인 경우
+
+            if (u.getUser_no() == 1) { 
                 response.sendRedirect("/views/admin/admin.jsp");
-            } else { // 일반 사용자인 경우
+            } else { 
                 response.sendRedirect("/");
             }
         } else {

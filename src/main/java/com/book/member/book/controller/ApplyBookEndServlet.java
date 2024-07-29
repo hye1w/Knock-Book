@@ -43,7 +43,7 @@ public class ApplyBookEndServlet extends HttpServlet {
             ab.setAp_user_no(userNo);
 
             int result = new ApplyBookDao().inputApply(ab);
-            System.out.println(result);
+          
             if (result > 0) {
                 // 성공 시 alert 창 띄우고 리디렉션
                 response.setContentType("text/html; charset=UTF-8");

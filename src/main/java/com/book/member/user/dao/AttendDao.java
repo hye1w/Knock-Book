@@ -26,10 +26,10 @@ public class AttendDao {
             pstmt1.setInt(1, userNo);
             rs = pstmt1.executeQuery();
             if(rs.next()) {
-                System.out.println("이미 출석 함");
+            
                 result = 1;
             } else {
-                System.out.println("출석 안함");
+             
                 String sql2 = "INSERT INTO `attend`(user_no) VALUES(?)";
                 pstmt2 = conn.prepareStatement(sql2);
                 pstmt2.setInt(1, userNo);

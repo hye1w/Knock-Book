@@ -18,7 +18,6 @@ import com.book.member.user.vo.User;
 public class UserFindIdEndServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    // GET 요청을 처리하도록 doGet 메소드 추가
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher dispatcher = request.getRequestDispatcher("/views/member/user/findid.jsp");
         dispatcher.forward(request, response);

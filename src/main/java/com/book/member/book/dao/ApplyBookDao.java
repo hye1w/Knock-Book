@@ -33,7 +33,7 @@ public class ApplyBookDao {
             int count = rs.getInt(1);
 
             if (count > 0) {
-                System.out.println("책이 이미 존재합니다.");
+               
                 result = 0;
             } else {
                 String sql2 = "SELECT COUNT(*) FROM book_apply WHERE apply_bk_title =? AND apply_bk_author =? AND apply_bk_publisher = ?";
@@ -46,7 +46,7 @@ public class ApplyBookDao {
                 int count2 = rs.getInt(1);
 
                 if (count2 > 0) {
-                    System.out.println("책 신청이 이미 존재합니다.");
+                   
                     result = 0;
 
                 }else {
@@ -57,7 +57,7 @@ public class ApplyBookDao {
                     pstmt.setString(3, ab.getApply_bk_publisher());
                     pstmt.setInt(4, ab.getAp_user_no());
                     result = pstmt.executeUpdate();
-                    System.out.println(result);
+
                 }
             }
             conn.commit();
@@ -169,7 +169,7 @@ public class ApplyBookDao {
             pstmt.setInt(2, applyNo);
 
            result = pstmt.executeUpdate();
-           System.out.println("결과 : "+result);
+
 
         }catch(Exception e) {
             e.printStackTrace();
